@@ -1,5 +1,7 @@
 # CdnI18nRoutingIssue
 
+https://konstantin.kharitonov.nl/cdn-i18n-routing-issue/
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.3.6.
 
 ## Development server
