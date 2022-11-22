@@ -4,6 +4,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule } from '@angular/router';
 
 import { AppComponent } from './app.component';
+import { environment } from '../environments/environment';
 
 @NgModule({
   declarations: [
@@ -14,13 +15,13 @@ import { AppComponent } from './app.component';
     RouterModule.forRoot([{ path: '', loadChildren: () => import('../page/page.module').then(m => m.PageModule) }])
   ],
   providers: [
-    {
+    ...(environment.production ? [{
       provide: APP_BASE_HREF,
       useFactory: () => {
         const [, root, locale] = location.pathname.split('/');
         return `//${ location.host }/${ root }/${ locale }/`
       }
-    }
+    }] : [])
   ],
   bootstrap: [AppComponent]
 })
