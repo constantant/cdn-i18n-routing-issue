@@ -18,7 +18,7 @@ import { AppComponent } from './app.component';
       provide: APP_BASE_HREF,
       useFactory: () => {
         const [, root, locale] = location.pathname.split('/');
-        return `//${ location.host }/${ root }/${ locale }`
+        return `//${ location.host }/${ root }/${ locale }/`
       }
     }
   ],
