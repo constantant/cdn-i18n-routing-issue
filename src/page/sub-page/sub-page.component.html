@@ -1,1 +1,25 @@
 <h2>{{id$ | async}}</h2>
+
+<ng-container [ngSwitch]="id$ | async">
+  <tui-svg
+    src="tuiIconHelpCircleLarge"
+    *ngSwitchCase="'why'"
+  ></tui-svg>
+  <tui-svg
+    src="tuiIconChevronsRightLarge"
+    *ngSwitchCase="'does'"
+  ></tui-svg>
+  <tui-svg
+    src="tuiIconBoxLarge"
+    *ngSwitchCase="'it'"
+  ></tui-svg>
+  <tui-svg
+    src="tuiIconCloudOffLarge"
+    *ngSwitchCase="'not'"
+  ></tui-svg>
+  <tui-svg
+    src="tuiIconActivityLarge"
+    *ngSwitchCase="'work'"
+  ></tui-svg>
+</ng-container>
+

@@ -5,6 +5,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { PageRoutingModule } from './page-routing.module';
 import { PageComponent } from './page.component';
 import { SubPageComponent } from './sub-page/sub-page.component';
+import { TuiSvgModule } from '@taiga-ui/core';
 
 const routes: Routes = [
   {
@@ -27,7 +28,8 @@ const routes: Routes = [
   imports: [
     CommonModule,
     PageRoutingModule,
-    RouterModule.forChild(routes)
+    RouterModule.forChild(routes),
+    TuiSvgModule
   ]
 })
 export class PageModule {}
